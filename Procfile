@@ -1,1 +1,1 @@
-web: node test\ express/serveur.js
+web: npm start

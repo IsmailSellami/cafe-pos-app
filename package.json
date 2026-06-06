@@ -1,0 +1,14 @@
+{
+  "name": "cafe-pos-app",
+  "version": "1.0.0",
+  "description": "POS system for café management",
+  "main": "test express/serveur.js",
+  "scripts": {
+    "start": "cd test\\ express && node serveur.js",
+    "dev": "cd test\\ express && npm run dev",
+    "install": "cd test\\ express && npm install"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
