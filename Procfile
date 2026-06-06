@@ -1,1 +1,1 @@
-web: cd "test express" && node serveur.js
+web: node test\ express/serveur.js
