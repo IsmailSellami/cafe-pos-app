@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <div class="parme">
+    <div class="header">
+          <div id="h1container">
+          <i id="gear-icon" class="fa-solid fa-gear"></i>
+          <p id="h1parametre">
+              Parametres
+          </p>
+          
+          </div>
+          <div class="decc">
+              <a  href="gerant.html" id="dec">
+              <button id="dec-button">
+                  
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                 Retour
+              </button>
+              </a>
+          </div>
+      </div>
+
+        <div>
+            <h2 class="h2parametre">Modifier le code d'accès</h2>
+            <div class="btn-totale">
+                <form onsubmit="return false;" method="POST" id="formUpdateAccessCodeGerant">
+                    <h3>changer le code d'accès de gerant</h3>
+                    <label for="gerantSelectForPassword">selectionner un gerant(e)</label>
+                    <select id="gerantSelectForPassword" name="id"></select>
+                    <input type="password" class="input" id="gerantPasswordNew" name="password" inputmode="numeric" maxlength="6" placeholder="Nouveau code d'accès de gerant" required>
+                    <input type="password" class="input" id="gerantPasswordRepeat" name="passwordRepeat" inputmode="numeric" maxlength="6" placeholder="Repeter le code d'accès de gerant" required>
+                    <input type="submit" class="btn-submit" id="saveGerantPasswordBtn" value="Enregistrer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formUpdateAccessCodeServeur">
+                    <h3>changer le code d'accès de serveur(e)</h3>
+                    <label for="serveurSelectForPassword">selectionner un serveur(e)</label>
+                    <select id="serveurSelectForPassword" name="id"></select>
+                    <input type="password" class="input" id="serveurPasswordNew" name="password" inputmode="numeric" maxlength="6" placeholder="Nouveau code d'accès de serveur" required>
+                    <input type="password" class="input" id="serveurPasswordRepeat" name="passwordRepeat" inputmode="numeric" maxlength="6" placeholder="Repeter le code d'accès de serveur" required>
+                    <input type="submit" class="btn-submit" id="saveServeurPasswordBtn" value="Enregistrer">
+                </form>
+            </div>
+
+            <h2 class="h2parametre">Ajouter un Nouveau gerant(e), serveur(e)</h2>
+            <div class="btn-totale">
+                <form onsubmit="return false;"      method="POST" id="formAddGerant">
+                    <label>nom du gerant(e)</label>
+                    <input type="text" class="input" id="newGerant" name="name" placeholder="Nom du gerant" required>
+                    <label>mot de passe</label>
+                    <input type="password" class="input" id="newGerantPassword" name="password" inputmode="numeric" maxlength="6" placeholder="Le code d'accès de gerant" required>
+                    <input type="password" class="input" id="newGerantPasswordRepeat" name="passwordRepeat" inputmode="numeric" maxlength="6" placeholder="Le code d'accès de gerant" required>
+                    <input type="submit" class="btn-submit" id="saveGerantBtn" value="Enregistrer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formAddServeur">
+                    <label>nom du serveur(e)</label>
+                    <input type="text" class="input" id="newServeur" name="name" placeholder="Nom du serveur" required>
+                    <label>mot de passe</label>
+                    <input type="password" class="input" id="newServeurPassword" name="password" inputmode="numeric" maxlength="6" placeholder="Le code d'accès de serveur" required>
+                    <input type="password" class="input" id="newServeurPasswordRepeat" name="passwordRepeat" inputmode="numeric" maxlength="6" placeholder="Le code d'accès de serveur" required>
+                    <input type="submit" class="btn-submit" id="saveServeurBtn" value="Enregistrer">
+                </form>
+            </div>
+
+            <h2 class="h2parametre">Modifier le Menu</h2>
+            <div class="btn-totale">
+                <h2 class="h2parametre">Changer un produit</h2>
+                <form onsubmit="return false;"      method="POST" id="formUpdateProductPrice">
+                    <label>Changer le prix d'un produit</label>
+                    <select id="productSelectPrice" name="idname"></select>
+                    <input type="number" class="input" id="productPriceNew" min="0" step="0.01" name="price" placeholder="Prix du produit" required>
+                    <input type="submit" class="btn-submit" id="saveProductPriceBtn" value="Enregistrer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formUpdateProductName">
+                    <label>Changer le nom d'un produit</label>
+                    <select id="productSelectName" name="idname"></select>
+                    <input type="text" class="input" id="productNameNew" name="idnameNew" placeholder="nouveux nom de ce produit" required>
+                    <input type="submit" class="btn-submit" id="saveProductNameBtn" value="Enregistrer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" enctype="multipart/form-data" id="formUpdateProductImg">
+                    <label>Changer l'image d'un produit</label>
+                    <select id="productSelectImg" name="idname"></select>
+                    <label class="btn-file" for="productImgFile">📁 chose file</label>
+                    <input type="file" id="productImgFile" name="productImgFile" accept="image/*" />
+                    <input type="submit" class="btn-submit" id="saveProductImgBtn" value="Enregistrer">
+                </form>
+            </div>
+
+            <div class="btn-totale">
+                <h2 class="h2parametre"> Deplacer un produit dans une catégorie</h2>
+
+
+                <form onsubmit="return false;"      method="POST" id="formProductCategory">
+                    <h3>Deplacer un produit dans une catégorie</h3>
+                    <label>Selectionner une catégorie</label>
+                    <select id="categorySelectMoveProd" name="idcat"></select>
+                    <label>Selectionner un produit</label>
+                    <select id="productSelectMoveToCat" name="idname"></select>
+                    <input type="submit" class="btn-submit" id="saveMoveProductToCategoryBtn" value="Enregistrer">
+                </form>
+            </div>
+
+            <div class="btn-totale">
+                <h2 class="h2parametre">Ajouter une table, une catégorie ou un produit</h2>
+                <form onsubmit="return false;"      method="POST" id="formAddTable">
+                    <label>Ajouter une table</label>
+                    <input type="number" class="input" id="newTableNum" name="numtable" placeholder="Donner le numero de table" required>
+                    <input type="text" class="input" id="newTableLieu" name="lieu" placeholder="Emplacement de la table" required>
+                    <input type="submit" class="btn-submit" id="addTableBtn" value="Ajouter">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formAddCategory">
+                    <label>Ajouter une catégorie</label>
+                    <input type="text" class="input" id="newCategoryIdcat" name="idcat" placeholder="Nouveau catégorie" required>
+                    <input type="submit" class="btn-submit" id="addCategoryBtn" value="Ajouter">
+                </form>
+
+                <form onsubmit="return false;"      method="POST"  id="formAddProduct">
+                    <label>Ajouter un produit</label>
+                    <input type="text" class="input" id="newProductName" name="idname" placeholder="Nouveau produit" required>
+                    <input type="number" class="input" id="newProductPrice" name="price" placeholder="Prix du produit" required>
+                    <label>Choisir la catégorie</label>
+                    <select name="idcat" id="newProductCategorySelect"></select>
+                    <label>Choisir l'image de produit</label>
+                    <label class="btn-file" for="newProductImgFile">📁 chose file</label>
+                    <input type="file" id="newProductImgFile" name="newProductImgFile" accept="image/*" />
+                    <input type="submit" class="btn-submit" id="addProductBtn" value="Ajouter">
+                </form>
+            </div>
+
+            <div class="btn-totale">
+                <h2 class="h2parametre">Supprimer un gerant(e), un serveur(e), une table, une catégorie ou un produit</h2>
+                <h4 class="red">Danger ! Cette action est irreversible <i class="fa-solid fa-skull-crossbones"></i></h4>
+
+                <form onsubmit="return false;"      method="POST" id="formDeleteGerant">
+                    <label>Supprimer un gerant(e)</label>
+                    <select id="deleteGerantSelect" name="id"></select>
+                    <input type="submit" class="btn-submit" id="deleteGerantBtn" value="Supprimer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formDeleteServeur">
+                    <label>Supprimer un serveur(e)</label>
+                    <select id="deleteServeurSelect" name="id"></select>
+                    <input type="submit" class="btn-submit" id="deleteServeurBtn" value="Supprimer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formDeleteTable">
+                    <label>Supprimer une table</label>
+                    <select id="deleteTableSelect" name="numtable"></select>
+                    <input type="submit" class="btn-submit" id="deleteTableBtn" value="Supprimer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formDeleteCategory">
+                    <label>Supprimer une catégorie</label>
+                    <h4 class="red">NB : tous les produits de cette catégorie seront supprimés <i class="fa-solid fa-triangle-exclamation"></i></h4>
+                    <select id="deleteCategorySelect" name="idcat"></select>
+                    <input type="submit" class="btn-submit" id="deleteCategoryBtn" value="Supprimer">
+                </form>
+
+                <form onsubmit="return false;"      method="POST" id="formDeleteProduct">
+                    <label>Supprimer un produit</label>
+                    <select id="deleteProductSelect" name="idname"></select>
+                    <input type="submit" class="btn-submit" id="deleteProductBtn" value="Supprimer">
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

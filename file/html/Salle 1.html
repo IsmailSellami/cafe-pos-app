@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+<div class="serveur">
+    <div >
+        <h1 class="title_serveur">café sellamo</h1>
+    </div>
+    <div class="table-serveur">  
+    </div>
+    
+    <!-- Shared Menu (kept global so products/categories are not duplicated) -->
+        
+            
+    
+    <!-- Ordering template (hidden) - will be cloned per table by JS -->
+     <div class="ordering-container template" id="ordering-template" >
+        <div class="menu-section" id="menu-section"> 
+            <div class="table-info">
+                <h2 class="table-title">Table </h2>
+                <h3>Choisissez une catégorie</h3>
+            </div>
+            
+            <div class="categories" id="categories">
+                <!-- Categories will be loaded here -->
+            </div>
+            
+            <div class="products" id="products">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+            <div class="order-section" id="order-section">
+                <div class="order-header">
+                    <h3>Commande</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="order-list" id="orderList">
+                    <p>Commande vide.</p>
+                </div>
+                <div class="order-total">
+                    <h3>Total</h3>
+                    <p id="totalAmount">0.000 DT</p>
+                </div>
+                <div class="button">
+                    <div class="order-buttons">
+                        <button id="de" class="btn-order">Demander</button>
+                        <button id="im" class="btn-order">Imprimer</button>
+                    </div>
+                    <div class="order-buttons">
+                        <button id="ch" class="btn-order">Changer</button>
+                        <button id="so" class="btn-order">Sortire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<script src="../js/serveur.js"></script>
+</body>
+</body>
+</html>

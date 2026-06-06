@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Socket.IO client (served by the server when socket.io is active) -->
+    <script src="../js/welcome.js" defer></script>
+    
+</head>
+ <body>
+  <!-- Welcome Notification -->
+  <div id="welcomeNotification" class="welcome-notification">
+    <span id="welcomeMessage"></span>
+  </div>
+       
+<div class="serveur">
+    <div >
+        <div>
+          <div class="decc">
+              <a  href="../html/index.html" id="dec">
+              <button id="dec-button">
+                  
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  Déconnexion
+              </button>
+              </a>
+          </div>
+
+      </div>
+        <h1 class="title_serveur">café sellamo</h1>
+         
+    </div>
+    <div class="inlimo">
+    <div class="liste">
+            
+    </div>
+    <div id="table-lieu">
+        
+    </div>
+    </div>
+    <!-- Shared Menu (kept global so products/categories are not duplicated) -->
+        
+            
+    
+    <!-- Ordering template (hidden) - will be cloned per table by JS -->
+     <div class="ordering-container template" id="ordering-template" >
+        <div class="menu-section" id="menu-section"> 
+            <div class="table-info">
+                <h2 class="table-title">Table </h2>
+                <h3>Choisissez une catégorie</h3>
+            </div>
+            
+            <div class="categories" id="categories">
+                <!-- Categories will be loaded here -->
+            </div>
+            
+            <div class="products" id="products">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+            <div class="order-section" id="order-section">
+                <div class="order-header">
+                    <h3>Commande</h3>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="order-list" id="orderList">
+                    <p>Commande vide.</p>
+                </div>
+                <div class="order-total">
+                    <h3>Total</h3>
+                    <p id="totalAmount">0.000 DT</p>
+                </div>
+                <div class="button">
+                    <div class="order-buttons">
+                        <button id="de" class="btn-order">Demander</button>
+                        <button id="im" class="btn-order">Imprimer</button>
+                    </div>
+                    <div class="order-buttons">
+                        <button id="ch" class="btn-order">Changer</button>
+                        <button id="so" class="btn-order">Sortire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<script type="module" src="../js/serveur.js"></script>
+</body>
+</html>
